@@ -1,0 +1,118 @@
+
+/* Fonts */
+
+@font-face {
+    font-family: alte;
+    src: url(../fonts/alte-haas-grotesk.regular.ttf);
+}
+
+@font-face {
+    font-family: alte-bold;
+    src: url(../fonts/alte-haas-grotesk.bold.ttf);
+}
+
+
+/* HTML ELEMENTS */
+
+
+body{
+    background-color: #000004;
+    color: #777777;
+    font-family: alte;
+}
+
+p, label {
+    font-family: alte;
+    color: #fff;
+}
+
+a {
+    color: #05a000;
+    font-family: alte-bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #777777;
+    font-family: alte-bold;
+}
+
+/* FOUNDATION OVERRIDES */
+
+.button{
+    border: 2px solid #ffa700;
+    border-radius: 0px 0px 25px 25px;
+    background-color: #000004;
+    color: #ffff00;
+    font-family: alte-bold;
+    margin: 10px;
+}
+
+.button:hover, .button:focus {
+    background-color: #005ac2;
+    color: #ffff00;
+}
+
+.small {
+    border-radius: 22px 22px 0px 0px;
+    margin: 5px;
+    font-family: alte;
+}
+
+
+.callout {
+    border: 2px solid #ffa700;
+    background-color: transparent;
+}
+
+.primary {
+    color: #000004!important;
+    border: 2px solid #005ac2;
+}
+
+.primary p {
+    color: #000004!important;
+}
+
+/* CUSTOM CLASSES & IDS */
+
+.loser {
+    background-color: #c40000;
+}
+
+#chosen {
+    background-color: #005ac2;
+}
+
+#winner {
+    background-color: #05a000;
+}
+
+.centerer {
+    text-align: center;
+}
+
+.righter{
+    text-align: right;
+}
+
+.hover_door:hover{
+    cursor: crosshair;
+}
+
+.yell {
+    color: #ffa700;
+}
+
+
+/**  COLORS
+
+black:      000004
+borders:    ffa700 (orange)
+yellow:     ffff00
+red:        c40000
+green:      05a000
+blue:       005ac2
+white:      ffffff
+gray:       878787
+
+*/
