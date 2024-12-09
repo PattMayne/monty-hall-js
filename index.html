@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foundation for Sites</title>
+  <title>Monty Hall Problem</title>
   <link rel="stylesheet" href="css/foundation.css">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/app.css?version=7">
+  <link rel="icon" href="img/pattmayne_icon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -15,31 +16,64 @@
   <div class="grid-container">
     <div class="grid-x grid-padding-x">
       <div class="large-12 cell centerer">
-        <h1>THE MONTY HALL PROBLEM</h1>
+        <h6>&nbsp;</h6>
+        <h1 class="orange">THE MONTY HALL PROBLEM</h1>
     </div>
 
     <div class="grid-x grid-padding-x">
+
+      <div class="large-12 cell">&nbsp;</div>
       
       <div class="large-4 medium-4 small-4 cell centerer" id="door_1">
+        <div class="grid-x grid-padding-x">
+          <div class="large-4 medium-3 small-2 cell">
+            &nbsp;
+          </div>
+          <div class="large-4 medium-6 small-8 cell">
+            <h3 class="door_sign" id="door_sign_1">1</h3>
+          </div>
+          <div class="large-4 medium-3 small-2 cell">
+            &nbsp;
+          </div>
+        </div>
         <img src="img/door_closed.png" class="door_img hover_door" id="1_closed" />
         <img src="img/door_open_winner.png" class="door_img" id="1_winner" />
         <img src="img/door_open_loser.png" class="door_img" id="1_loser"/>
       </div>
 
       <div class="large-4 medium-4 small-4 cell centerer" id="door_2">
+        <div class="grid-x grid-padding-x">
+          <div class="large-4 medium-3 small-2 cell">
+            &nbsp;
+          </div>
+          <div class="large-4 medium-6 small-8 cell">
+            <h3 class="door_sign" id="door_sign_2">2</h3>
+          </div>
+          <div class="large-4 medium-3 small-2 cell">
+            &nbsp;
+          </div>
+        </div>
         <img src="img/door_closed.png" class="door_img hover_door" id="2_closed" />
         <img src="img/door_open_winner.png" class="door_img" id="2_winner" />
         <img src="img/door_open_loser.png" class="door_img" id="2_loser"/>
       </div>
 
       <div class="large-4 medium-4 small-4 cell centerer" id="door_3">
+        <div class="grid-x grid-padding-x">
+          <div class="large-4 medium-3 small-2 cell">
+            &nbsp;
+          </div>
+          <div class="large-4 medium-6 small-8 cell">
+            <h3 class="door_sign" id="door_sign_3">3</h3>
+          </div>
+          <div class="large-4 medium-3 small-2 cell">
+            &nbsp;
+          </div>
+        </div>
         <img src="img/door_closed.png" class="door_img hover_door" id="3_closed" />
         <img src="img/door_open_winner.png" class="door_img" id="3_winner" />
         <img src="img/door_open_loser.png" class="door_img" id="3_loser"/>
       </div>
-
-
-
 
       <div class="large-12 cell">
         <div class="callout centerer">
@@ -51,27 +85,59 @@
             <div class="large-12 cell centerer" id="switchButtonContainer">
               <a class="button switch_button" id="switch_yes_button">SWITCH DOORS</a>
               <a class="button switch_button" id="switch_no_button">KEEP SELECTION</a>
+              <a class="button" id="play_again_button">PLAY AGAIN</a>
             </div>
-          </div>
 
+            <!-- scores -->
 
+            <div class="large-12 cell">
+              <div id="stats_container">
+                <div class="grid-x grid-padding-y">
 
+                  <div class="large-6 medium-6 small-6 cell">
+                    <h6>WINS:</h6>
+                    <p class="score">SWITCH: <span id="switch_wins" class="score_num">0</span></p>
+                    <p class="score">KEEP: <span id="keep_wins" class="score_num">0</span></p>
+                  </div>
 
-          <h3>Here's How it Works:</h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or
-            totally destroy to get going.</p>
+                  <div class="large-6 medium-6 small-6 cell">
+                    <h6>LOSSES:</h6>
+                    <p class="score">SWITCH: <span id="switch_losses" class="score_num">0</span></p>
+                    <p class="score">KEEP: <span id="keep_losses" class="score_num">0</span></p>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+
+        <h3 id="instructions">HERE'S HOW IT WORKS:</h3>
+
+        <div id="instructions_container">
+          <p>There's money hidden behind one door, and donkeys behind the other two. You pick one door, and then we will open a different door, one with a donkey behind it.</p>
+          <p>Then you have to choose: Will you keep your current selection? Or switch your selection with the other unopened door?</p>
+          <p>This is a famous logic puzzle. Does switching doors offer an advantage? Is keeping your selection a wiser choice? Or is it random?</p>
+          <p>You can play the game repeatedly, and we'll tally up the accumulated score so you can see for yourself...</p>
+        </div>
+          
         </div>
       </div>
-
+      <div class="large-12 cell">
+        <h6>CREDITS:</h6>
+        <p>Fonts: <a href="https://www.dafont.com/alte-haas-grotesk.font" target="_blank">Alte Haas Grotesk</a> by <a href="https://www.yannlecoroller.com/" target="_blank">Yann Le Coroller</a>, <a href="https://www.fontsquirrel.com/fonts/bowlby-one" target="_blank">Bowlby One</a> by <a href="https://www.fontsquirrel.com/fonts/list/foundry/vernon-adams" target="_blank">Vernon Adams</a></p>
+        <p>Code written by <a href="https://pattmayne.com" target="_blank">Matt Payne</a></p>
+        <p>Images from <a href="https://deepai.org" target="_blank">deepai.org</a></p>
+      </div>
     </div>
-
   </div>
 
 
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/what-input.js"></script>
   <script src="js/vendor/foundation.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/app.js?version=7"></script>
 </body>
 
 </html>

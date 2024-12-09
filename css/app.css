@@ -11,6 +11,11 @@
     src: url(../fonts/alte-haas-grotesk.bold.ttf);
 }
 
+@font-face {
+    font-family: bowlby;
+    src: url(../fonts/bowlby.otf);
+}
+
 
 /* HTML ELEMENTS */
 
@@ -33,7 +38,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     color: #777777;
-    font-family: alte-bold;
+    font-family: bowlby;
 }
 
 /* FOUNDATION OVERRIDES */
@@ -75,6 +80,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* CUSTOM CLASSES & IDS */
 
+.door_sign {
+    border: 4px solid green;
+    border-radius: 999px;
+    padding: 7px;
+    color:#fff;
+}
+
 .loser {
     background-color: #c40000;
 }
@@ -85,6 +97,38 @@ h1, h2, h3, h4, h5, h6 {
 
 #winner {
     background-color: #05a000;
+}
+
+.score, .score_num{
+    font-family: bowlby;
+}
+
+#instructions {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffa700;
+}
+
+#instructions_container {
+    width: 500px;
+    margin: auto;
+
+    @media (max-width: 550px) {
+        width: 100%;
+    }
+}
+
+#stats_container {
+    width: 500px;
+    margin: auto;
+
+    @media (max-width: 550px) {
+        width: 100%;
+    }
+}
+
+.normal_pointer {
+    cursor: default;
 }
 
 .centerer {
@@ -99,10 +143,21 @@ h1, h2, h3, h4, h5, h6 {
     cursor: crosshair;
 }
 
-.yell {
+.orange {
     color: #ffa700;
 }
 
+.green {
+    color: #05a000;
+}
+
+.red {
+    color: #c40000;
+}
+
+.blue{
+    color: #005ac2;
+}
 
 /**  COLORS
 
